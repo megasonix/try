@@ -20,7 +20,6 @@ public class Homescreen extends AppCompatActivity {
     public static final int CAMERA_PERMISSIONS_REQUEST = 2;
     public static final int CAMERA_IMAGE_REQUEST = 3;
     public static final String FILE_NAME = "temp.jpg";
-    MainActivity main_act = new MainActivity();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +45,7 @@ public class Homescreen extends AppCompatActivity {
 
     }
     public void openColordetect_activity(){
-        Intent color = new Intent(this, MainActivityOld.class);
+        Intent color = new Intent(this, colordetect.class);
                 startActivity(color);
     }
 
@@ -55,22 +54,5 @@ public class Homescreen extends AppCompatActivity {
         startActivity(object);
 
 }
-//    public void startCamera() {
-//        if (PermissionUtils.requestPermission(
-//                this,
-//                CAMERA_PERMISSIONS_REQUEST,
-//                Manifest.permission.READ_EXTERNAL_STORAGE,
-//                Manifest.permission.CAMERA)) {
-//            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//            Uri photoUri = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", getCameraFile());
-//            intent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
-//            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-//            startActivityForResult(intent, CAMERA_IMAGE_REQUEST);
-//        }
-//    }
-//
-//    public File getCameraFile() {
-//        File dir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
-//        return new File(dir, FILE_NAME);
-//    }
+
 }

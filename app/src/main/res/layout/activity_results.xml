@@ -63,22 +63,6 @@
         app:layout_constraintTop_toTopOf="@+id/design"
         app:layout_constraintVertical_bias="0.0" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/set_btn"
-        android:layout_width="75dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="4dp"
-        android:clickable="true"
-        app:backgroundTint="#00F6F6F6"
-        app:backgroundTintMode="multiply"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:maxImageSize="70dp"
-        app:srcCompat="@drawable/settings_pic"
-        app:useCompatPadding="true" />
-
     <ImageView
         android:id="@+id/main_image"
         android:layout_width="227dp"

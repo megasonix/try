@@ -75,7 +75,7 @@ public class Results extends AppCompatActivity {
 
         img = (Button) findViewById(R.id.img_btn);
         home= (Button) findViewById(R.id.homescrn_btn);
-        setting =(FloatingActionButton) findViewById(R.id.set_btn);
+//        setting =(FloatingActionButton) findViewById(R.id.set_btn);
 
         img.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,14 +93,14 @@ public class Results extends AppCompatActivity {
 
 
         });
-        setting.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSettings_activity();
-            }
-
-
-        });
+//        setting.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                openSettings_activity();
+//            }
+//
+//
+//        });
     }
 
     public void startGalleryChooser() {
@@ -325,7 +325,7 @@ public class Results extends AppCompatActivity {
         List<EntityAnnotation> labels = response.getResponses().get(0).getLabelAnnotations();
         if (labels != null) {
             for (EntityAnnotation label : labels) {
-                message.append(String.format(Locale.US, "%.1f: %s", label.getScore()*100, label.getDescription()));
+                message.append(String.format(Locale.US, "%%%.1f: %s", label.getScore()*100, label.getDescription()));
                 message.append("\n");
             }
         } else {
