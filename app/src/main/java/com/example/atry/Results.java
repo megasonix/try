@@ -335,10 +335,7 @@ public class Results extends AppCompatActivity {
         return message.toString();
     }
 
-    public void opencaptureImage_activity(){
-        Intent intent = new Intent(this, captureimage.class);
-        startActivity(intent);
-    }
+
     public void openHomescreen_activity(){
         Intent intent = new Intent(this, Homescreen.class);
         startActivity(intent);
